@@ -1,0 +1,34 @@
+{
+  "name": "react-isomorphic-boilerplate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Using React.js + Handlebars + Browserify to render your DOM server side while keeping React's awesomeness browser side too.",
+  "main": "./server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "npm run jsx & npm run build & npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "./node_modules/nodemon/bin/nodemon.js --exec npm run dev",
+    "jsx": "jsx common/components/ lib/components/",
+    "build": "browserify browser/index.js -d > public/js/bundle.js"
+  },
+  "author": "Jess Telford <hi@jes.st>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^7.0.0",
+    "react-tools": "^0.12.1"
+  },
+  "dependencies": {
+    "express": "^4.10.4",
+    "handlebars": "^2.0.0",
+    "react": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahengchang/react-isomorphic-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wahengchang/react-isomorphic-boilerplate/issues"
+  },
+  "homepage": "https://github.com/wahengchang/react-isomorphic-boilerplate#readme"
+}
